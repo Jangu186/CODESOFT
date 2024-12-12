@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="profile">
+            <!-- Profile Picture Upload -->
+            <input type="file" id="profile-picture-input" accept="image/*" />
+            <img id="profile-pic" src="Images/placeholder.png" alt="Your Profile Picture">
+            <h1 id="profile-name">Sidam Jangubai</h1>
+            <p id="profile-description">Innovative Web Developer | Passionate Creator</p>
+        </div>
+    </header>
+
+    <section class="about">
+        <h2>About Me</h2>
+        <p>I specialize in building intuitive, elegant web solutions that delight users and meet business goals. My expertise spans modern web technologies and design principles.</p>
+    </section>
+
+    <section class="skills">
+        <h2>My Skills</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Machine Learning</li>
+            <li>Python</li>
+            <li>Java</li>
+            <li>SDLC</li>
+            <li>SQL</li>
+            <li>Power BI</li>
+        </ul>
+    </section>
+
+    <section class="projects">
+        <h2>My Projects</h2>
+        <ul>
+            <li>Social Networking Website</li>
+            <li>E-Learning Platform</li>
+            <li>Online Chatbot-Based Ticketing System</li>
+            <li>Landing Page</li>
+            <li>Portfolio Website</li>
+            <li>Calculus Calculator</li>
+        </ul>
+    </section>
+
+    <section class="resume">
+        <h2>Resume</h2>
+        <a href="your-resume.pdf" download>Download My Resume</a>
+    </section>
+
+    <section class="resources">
+        <h2>Resource Library</h2>
+        <ul>
+            <li><a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs</a></li>
+            <li><a href="https://www.freecodecamp.org/" target="_blank">FreeCodeCamp</a></li>
+            <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a></li>
+        </ul>
+    </section>
+
+    <section class="timeline">
+        <h2>My Journey</h2>
+        <div class="timeline-container">
+            <div class="timeline-event">
+                <div class="event-date">2023</div>
+                <div class="event-description">
+                    <h3>Started Learning Web Development</h3>
+                    <p>Embarked on my journey to become a web developer by learning HTML, CSS, and JavaScript.</p>
+                </div>
+            </div>
+            <div class="timeline-event">
+                <div class="event-date">2024</div>
+                <div class="event-description">
+                    <h3>Built My First Portfolio</h3>
+                    <p>Created my first portfolio to showcase my web development skills.</p>
+                </div>
+            </div>
+            <div class="timeline-event">
+                <div class="event-date">2025</div>
+                <div class="event-description">
+                    <h3>Launched Personal Projects</h3>
+                    <p>Launched multiple personal projects including a music app and a ticket booking system.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:sidamjangubai74@gmail.com">sidamjangubai74@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/sidam-jangubai-78aa62265" target="_blank">Sidam Jangubai</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Sidam Jangubai. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Handle Profile Picture Upload
+        document.getElementById('profile-picture-input').addEventListener('change', function(event) {
+            const reader = new FileReader();
+            reader.onload = function() {
+                document.getElementById('profile-pic').src = reader.result;
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        });
+
+        // Handle Profile Name Change (Optional)
+        document.getElementById('profile-name').addEventListener('click', function() {
+            const newName = prompt("Enter your new name:");
+            if (newName) {
+                document.getElementById('profile-name').innerText = newName;
+            }
+        });
+    </script>
+</body>
+</html>
