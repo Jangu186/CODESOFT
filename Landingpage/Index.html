@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MS Dhoni's Cricket World - Thala for a Reason</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- Link to the external CSS file -->
+    <script>
+        function showInfo(content) {
+            document.getElementById('popup-content').innerHTML = content;
+            document.querySelector('.info-popup').style.display = 'block';
+            document.querySelector('.overlay').style.display = 'block';
+        }
+
+        function closeInfo() {
+            document.querySelector('.info-popup').style.display = 'none';
+            document.querySelector('.overlay').style.display = 'none';
+        }
+
+        function activateNavLink() {
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => link.classList.remove('active'));
+            this.classList.add('active');
+        }
+
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => link.addEventListener('click', activateNavLink));
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Saluting a Legend: <span class="highlight">Mahendra Singh Dhoni</span></h1>
+        <nav>
+            <a onclick="showInfo('<h2>Achievements</h2><p>MS Dhoni has led India to numerous cricketing achievements including:<ul><li>2007 T20 World Cup</li><li>2011 ODI World Cup</li><li>2013 Champions Trophy</li></ul></p>')">Achievements</a>
+            <a onclick="showInfo('<h2>Records</h2><p>Dhoni holds remarkable records such as:<ul><li>Most stumpings in ODI cricket (195)</li><li>First wicketkeeper to score over 10,000 runs in ODIs</li><li>Most matches as a captain in IPL (204 matches)</li></ul></p>')">Records</a>
+            <a onclick="showInfo('<h2>Upcoming Events</h2><p>Upcoming events:<ul><li>Meet and Greet in Chennai</li><li>IPL fan engagement activities</li><li>Exclusive merchandise launch</li></ul></p>')">Upcoming Events</a>
+            <a onclick="showInfo('<h2>About MS Dhoni</h2><p>MS Dhoni is known as one of the greatest cricket captains of all time, inspiring millions with his calm demeanor and incredible cricketing skills. THALA FOR A REASON 7</p>')">About</a>
+            <a onclick="showInfo('<h2>Fan Club</h2><p>Join the Dhoni Fan Club to connect with millions of fans, share memories, and celebrate Dhoni’s legacy!</p>')">Fan Club</a>
+            <a onclick="showInfo('<h2>Merchandise Store</h2><p>Explore exclusive Dhoni-themed merchandise including jerseys, autographed memorabilia, and more.</p>')">Merchandise Store</a>
+            <a onclick="showInfo('<h2>Visuals & Videos</h2><p>Watch iconic moments from Dhoni’s career, including match highlights and behind-the-scenes footage.</p>')">Visuals & Videos</a>
+        </nav>
+    </header>
+
+    <div class="overlay" onclick="closeInfo()"></div>
+    <div class="info-popup">
+        <div id="popup-content"></div>
+        <button onclick="closeInfo()">Close</button>
+    </div>
+
+    <div class="number-seven">7</div>
+
+    <footer>
+        <p>&copy; 2025 MS Dhoni's Cricket World. All rights reserved.</p>
+        <div class="social-media">
+            <a href="https://www.linkedin.com/in/sidam-jangubai-78aa62265" target="_blank">LinkedIn</a>
+            <a href="mailto:sidamjangubai74@gmail.com">Email</a>
+        </div>
+    </footer>
+    
